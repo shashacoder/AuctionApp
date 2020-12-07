@@ -18,16 +18,17 @@
 
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
+        <br>
         <span>{{ form.username.label_tag }}</span>
-        <span class="textbox">{{ form.username }}</span>
+        <span>{{ form.username }}</span>
+        <br>
         <br>
         <br>
         <span>{{ form.password.label_tag }}</span>
-        <span class="textbox">{{ form.password }}</span>
+        <span>{{ form.password }}</span>
         <br>
         <br>
-
-        <input class="submit_button" type="submit" value="Login" />
+        <input class="submit_button" type="submit" value="Login" id="submitButton"/>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
 
