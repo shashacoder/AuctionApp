@@ -73,7 +73,7 @@ h4 {
     height: 550px;
     background: red;
     /* text-align: center; */
-    background: var(--color0);
+    background: var(--main-bg);
     border-radius: 20px;
     margin-top: 100px;
     padding-top: 20px;
@@ -82,7 +82,7 @@ h4 {
 
 .login-wrapper {
     padding-top: 20px;
-    background: var(--color0);
+    background: var(--main-bg);
     border-radius: 20px;
     position: absolute;
     margin: auto;
@@ -102,6 +102,16 @@ h4 {
 
 .main-content {
     margin-top: 80px;
+}
+
+.hr{
+	height:2px;							/*for line after button*/
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+
+.foot-lnk{
+	text-align:center;							/*for already member and forget alignment*/
 }
 
 .error {

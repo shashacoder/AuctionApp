@@ -115,9 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
 
-# This logs any emails sent to the console (so you can copy the password reset link from the console).
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -144,3 +141,11 @@ STATICFILES_DIRS = [
 # Media files
 MEDIA_ROOT = '/var/www/auctionrush/media'
 MEDIA_URL = '/media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'quizapp05@gmail.com'
+EMAIL_HOST_PASSWORD = 'hsdjmeklfmjwdcej'
+DEFAULT_FROM_EMAIL = 'AuctionApp Team <noreply@auctionapp.com>'

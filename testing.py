@@ -24,7 +24,7 @@ class AuctionLogin(unittest.TestCase):
         titlename.send_keys("")                                                  #add title here
         description = driver.find_element_by_name("description")
         description.send_keys("")                                                #add description here
-        driver.find_element_by_name("image").send_keys(os.getcwd()+"/")          #add the image here
+        driver.find_element_by_name("image").send_keys(os.getcwd()+"/")          #add image here
         val = driver.find_element_by_name("min_value")
         val.send_keys("")                                                        #add value here
         clickCreate=driver.find_element_by_id("submitAuction")
