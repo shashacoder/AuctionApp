@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     db:
-        image: sqlite3
+        image: keinos/sqlite3
         
        
         
