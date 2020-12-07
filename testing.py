@@ -21,12 +21,12 @@ class AuctionLogin(unittest.TestCase):
         loginbutton=driver.find_element_by_id("createAuction")
         loginbutton.click()
         titlename = driver.find_element_by_name("title")
-        titlename.send_keys("jnjnl")                                                  #add title here
+        titlename.send_keys("")                                                  #add title here
         description = driver.find_element_by_name("description")
-        description.send_keys("mkjj")                                                #add description here
-        driver.find_element_by_name("image").send_keys(os.getcwd()+"/garima.jpeg")          #add the image here
+        description.send_keys("")                                                #add description here
+        driver.find_element_by_name("image").send_keys(os.getcwd()+"/")          #add the image here
         val = driver.find_element_by_name("min_value")
-        val.send_keys("100")                                                        #add value here
+        val.send_keys("")                                                        #add value here
         clickCreate=driver.find_element_by_id("submitAuction")
         clickCreate.click()
         clickLogout = driver.find_element_by_id("logout")
