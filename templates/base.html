@@ -21,7 +21,7 @@
           {% if user.is_authenticated %}
           <li class="navbar-item"><a class="navbar-link" href="{% url 'my_auctions' %}">My auctions</a></li>
           <li class="navbar-item"><a class="navbar-link" href="{% url 'my_bids' %}">My bids</a></li>
-          <li class="create-auction-button" id="createAuction"><a class="navbar-link" href="{% url 'auctions:create' %}"><button>Create an auction</button></a> </li>
+          <li class="create-auction-button" id="createAuction"><a class="navbar-link" href="{% url 'auctions:create' %}">Create an auction</a> </li>
           {% endif %}
           {% if user.is_authenticated %}
             <li class="navbar-item-right"><a class="navbar-link" id="logout" href="{% url 'logout' %}">Logout</a></li>
@@ -33,5 +33,6 @@
         </ul>
      {% endblock %}
       <div class="main-content">{% block content %}{% endblock %}</div>
+
 </body>
 </html>

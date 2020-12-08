@@ -43,6 +43,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    
     'auctions.apps.AuctionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,7 +51,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # Login via Google as an exemple, you can choose facebook, twitter as you like
+    'allauth.socialaccount.providers.google',
 ]
+
+
+
+
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,6 +90,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
+             
             ],
         },
     },
@@ -133,6 +150,7 @@ USE_TZ = True
 
 STATIC_ROOT = '/var/www/auctionrush/static'
 STATIC_URL = '/static/'
+SITE_ID=1
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -149,3 +167,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'quizapp05@gmail.com'
 EMAIL_HOST_PASSWORD = 'hsdjmeklfmjwdcej'
 DEFAULT_FROM_EMAIL = 'AuctionApp Team <noreply@auctionapp.com>'
+
+LOGIN_REDIRECT_URL = "/"
