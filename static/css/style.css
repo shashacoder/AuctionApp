@@ -69,15 +69,23 @@ h4 {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 800px;
+    text-align: left;
+    width: 400px;
     height: 550px;
     background: red;
-    /* text-align: center; */
     background: var(--main-bg);
     border-radius: 20px;
     margin-top: 100px;
     padding-top: 20px;
     padding-left: 60px;
+}
+
+.helptext {
+    display: none;
+}
+
+#id_username {
+    align-self: center;
 }
 
 .login-wrapper {

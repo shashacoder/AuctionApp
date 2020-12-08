@@ -1,11 +1,14 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import logout, authenticate, login
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.contrib.auth import login
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from auctions.forms import CustomUserCreationForm
 
 def register(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -24,7 +27,7 @@ def register(request):
                               "error_message": error_message,
                           })
 
-    form = UserCreationForm
+    form = CustomUserCreationForm
     return render(request = request,
                   template_name = "registration/register.html",
                   context={"form":form})
